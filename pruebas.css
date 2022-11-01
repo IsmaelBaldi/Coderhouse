@@ -1,0 +1,22 @@
+.contenedor{
+    width: 624px;
+    background-color: aqua;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.rojo{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+.azul{
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+}
+.amarillo{
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+}

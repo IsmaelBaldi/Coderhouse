@@ -1,0 +1,346 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.input{
+    display: none;
+}
+/* Mobile first INDEX - hasta 625px */
+@media screen and (max-width: 625px){
+    /* Display:none */
+    .cabeza__subtitulo{
+        display: none;
+    }
+    .buscador{
+        display: none;
+    }
+    #proximo-gp{
+        display: none;
+    }
+    .proximo-gp__pais-calendario{
+        display: none;
+    }
+    .contenedor-noticias__titulo{
+        display: none;
+    }
+   /* header-Menu */
+    #cabeza{
+        position: fixed;
+        top:0px;
+        width: 100%;
+        background-color: #D90824;
+        padding-top: 5px;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    /* hijos de Header-Menu */
+    .cabeza__titulo{
+        font-family: 'Bree Serif', serif;
+     }
+    .navmenu{
+       position: fixed;
+       top:45px;
+       background-color: #2A2A28;
+       color: white;
+       height: 400px;
+       width: 100%;
+       left: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+       clip-path:circle(0 at center);
+    }
+    .navmenu__item{
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+    }
+    .input:checked + .navmenu{
+        clip-path: circle(100% at center);
+    }
+    /* Proximo-gp */
+    #publicidad{
+        display:none
+    }
+    /* Noticias */
+    #contenedor-noticias{
+       margin-top: 100px;
+    }
+    /* hijos-Noticias */
+    .noticias-destacada{
+        margin: 10px auto;
+        width: 400px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        justify-items: start;
+    }
+    .noticias-destacada__img{
+        width: 100%;
+        height: 200px;
+    }
+    .noticias-destacadas__titulo{
+        font-family:'Noticia Text', serif; 
+        color: black;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .contenedor-noticias__comunes{
+         width: 90%; 
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+       }
+    .comunes{
+        margin: 10px;
+        height: 150px;
+        width: 175px;
+    }
+    .noticias__comunes-img{
+        width: 100%;
+        height: 75px;
+        
+    }
+    .noticias-comunes__titulo{
+        font-family:'Noticia Text', serif; 
+        color: black;
+    }
+    .noticias__subtitulo{
+        font-family: 'Raleway', sans-serif;
+        color: #2E2E2E;
+
+    }
+    #newsletters{
+      display: none;
+    }
+   /* Pie */
+   #pie{
+    margin-top: 40px;
+    padding:15px 0;
+    background-color: #12172B;
+    }
+    /* hijos-pie */
+    .pie__laescuderia{
+        padding-left: 10px;
+    }
+    .pie__laescuderia-titulo{
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+        font-size: 30px;
+        color: white;
+    }
+    .pie__laescuderia-subtitulo{
+        color: white;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 15px;
+    }
+    .contenedor__contacto-seguinos{
+        margin-top: 15px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    .pie__titulo{
+        text-align: center;
+        color: white;
+        font-family: 'Patua One', cursiva;
+    }
+    .pie__seguinos{
+        width: 120px;
+    }
+    .contenedor-logo{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding-top: 8px;
+    }
+    .pie__email{
+        color: white;
+        font-family: sans-serif;
+    }
+}
+/* Desktop - a partir de 626px */
+@media screen and (min-width: 626px){
+    .nav__img-menu{
+        display: none;
+    }
+    body{
+        background-color: #F5F4F6;
+    }
+    #contenedor-grid{
+        display: grid;
+        grid-template-areas:"header header header"
+                            "proximo-gp proximo-gp proximo-gp"
+                            "noticias-destacadas noticias-destacadas publicidad"
+                            "encuesta encuesta encuesta"
+                            "newsletters newsletters newsletters"
+                            "footer footer footer";
+        grid-template-columns:2fr 1fr 350px ;
+    }
+    /* Header*/
+    #cabeza{
+        grid-area: header;
+        background-color: #D90824;
+        padding-top:10px;
+    }
+    /* Hijos de Header */
+    .cabeza__titulo{
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+        font-size: 40px;
+    }
+    .cabeza__subtitulo{
+        text-align: center;
+        font-family: 'Stint Ultra Condensed', cursiva;
+        font-size: 25px;
+    }
+    /* Menu */
+    .contenedor-menu{
+        padding: 5px 0;
+        background-color: #EC0927;
+    }
+    /* hijos de menu */
+    .navmenu{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+    .navmenu__item{
+        padding: 0 5px;
+        text-decoration: none;
+        color: white;
+    }
+    .navmenu__item:hover{
+        border-right: solid 5px white;
+        border-left: solid 5px white;
+    }
+    /* Proximo-GP */
+    #proximo-gp{
+        grid-area: proximo-gp;
+        background-color: #1B1E22;
+        margin: 10px 18%;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-left: 35px;
+    }
+    /* Hijos de Proximo-GP */
+    .proximo-gp__contenedor{
+        display: flex;
+        flex-flow:row ;
+        justify-content:center;
+        padding: 10px;
+    }
+    .proximo-gp__imagen-pais{
+        display: flex;
+    }
+    .proximo-gp__contenedor-img{
+        padding-right: 5px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        border-right: solid 2px white;
+        border-bottom: solid 2px white;
+    }
+    .proximo-gp__pista{
+        width: 140px;
+        height: 90px;
+    }
+    .proximo-gp__pais-calendario{
+        margin-left: 40px;
+        width: 200px;
+        position: relative;
+    }
+    .proximo-gp__pais{
+        text-align: end;
+        color: white;
+        font-size: 30px;
+    }
+    .proximo-gp__bandera{
+        position: absolute;
+        top: -1px;
+        width: 35px;
+        height: 38px;
+    }
+    .proximo-gp__calendario{
+        background-color:#49545d;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    /* Noticias */
+    #contenedor-noticias{
+        grid-area: noticias-destacadas;
+    }
+    /* Hijo de Noticias */
+    .contenedor-noticias__titulo{
+        font-family: 'Acme', sans-serif;
+        color: #E21219;
+        font-size: 30px;
+        text-decoration: underline 5px;
+        padding-left: 8%;
+    }
+    .contenedor-noticias__destacadas{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .noticias-destacada{
+        width: 400px;
+        height: 600px;
+    }
+    .noticias-destacada__img{
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .noticias__subtitulo{
+        font-family: 'Raleway', sans-serif;
+        color: #1d1c1c;
+    }
+    .noticias-destacadas__titulo{
+        font-family:'Noticia Text', serif; 
+        color: black;
+    }
+    /* Noticias Comunes */
+    .contenedor-noticias__comunes{
+        margin: 10px 15%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    /* Hijos de Noticias Comunes */
+    .comunes{
+        height:500px;
+        width:220px ;
+    }
+    .noticias__comunes-img{
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+    }
+    .noticias-comunes__titulo{
+        font-family:'Noticia Text', serif; 
+        color: black;
+    }
+
+    <!-- Header-Menu -->
+    <!-- Proximo-gp -->
+    <!-- Publicidad -->
+    <!-- Noticias -->
+    <!-- Encuesta -->
+    <!-- Newsletters -->
+    <!-- Pie -->
+}

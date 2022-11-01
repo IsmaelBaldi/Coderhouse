@@ -9,6 +9,7 @@
     width: 400px;
     height: 400px;
     background-color: red;
+    font-family: 'Stint Ultra Condensed', cursiva;
 }
 .azul{
     background-color: blue;
@@ -19,4 +20,7 @@
     width: 400px;
     height: 400px;
     background-color: yellow;
+}
+h2{
+    font-family: 'Stint Ultra Condensed', cursiva;
 }

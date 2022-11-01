@@ -23,10 +23,26 @@
     .contenedor-noticias__titulo{
         display: none;
     }
+    #publicidad{
+        display: none;
+    }
+    #encuesta{
+        display: none;
+    }
+    #newsletters{
+        display: none;
+    }
+    #carouselExampleControls{
+        display: none;
+    }
+    #estadisticas{
+        display: none;
+    }
    /* header-Menu */
     #cabeza{
         position: fixed;
         top:0px;
+        z-index: 999;
         width: 100%;
         background-color: #D90824;
         padding-top: 5px;
@@ -167,11 +183,67 @@
         color: white;
         font-family: sans-serif;
     }
+    /* Equipos*/
+    #mobile-first__equipos{
+        position: relative;
+        height: 135px;
+        width: 90%;
+        margin-top: 60px;
+        margin-left:5% ;
+        margin-right:5% ;
+    }
+    /* hijos de Equipos */
+    .equipo__contenedor{
+       
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+     }
+    .equipo__contenedor-nombre-escudo{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        
+    }
+    .equipo__nombre{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        text-align: center;
+    }
+    .equipo__escudo{
+        position: absolute;
+        top: -15px;
+        left: 150px;
+        width: 60px;
+        height: 60px;
+    }
+    .equipo__contenedor-piloto{
+        width: 100%;
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: space-around;
+    }
+    .equipo__piloto{
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .equipo__auto{
+        position: absolute;
+        bottom: 0;
+        left: 35%;
+    }
 }
 /* Desktop - a partir de 626px */
 @media screen and (min-width: 626px){
+    /* Display:none */
     .nav__img-menu{
         display: none;
+    }
+    #mobile-first__equipos{
+        display:none;
     }
     body{
         background-color: #F5F4F6;
@@ -180,8 +252,8 @@
         display: grid;
         grid-template-areas:"header header header"
                             "proximo-gp proximo-gp proximo-gp"
+                            "noticias-destacadas noticias-destacadas encuesta"
                             "noticias-destacadas noticias-destacadas publicidad"
-                            "encuesta encuesta encuesta"
                             "newsletters newsletters newsletters"
                             "footer footer footer";
         grid-template-columns:2fr 1fr 350px ;
@@ -286,21 +358,21 @@
         color: #E21219;
         font-size: 30px;
         text-decoration: underline 5px;
-        padding-left: 8%;
+        padding-left: 125px;
     }
     .contenedor-noticias__destacadas{
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
         margin-top: 20px;
     }
     .noticias-destacada{
         width: 400px;
-        height: 600px;
+        height: 420px;
     }
     .noticias-destacada__img{
         width: 100%;
-        height: 400px;
+        height: 300px;
         border-radius: 10px;
     }
     a{
@@ -316,14 +388,14 @@
     }
     /* Noticias Comunes */
     .contenedor-noticias__comunes{
-        margin: 10px 15%;
+        margin: 50px 15%;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
     }
     /* Hijos de Noticias Comunes */
     .comunes{
-        height:500px;
+        height:425px;
         width:220px ;
     }
     .noticias__comunes-img{
@@ -335,12 +407,183 @@
         font-family:'Noticia Text', serif; 
         color: black;
     }
+    /* Publicidad */
+    #publicidad{
+        grid-area: publicidad;
+        height: 600px;
+        background:linear-gradient(#F23602, white,white, #5634FE );
+        border-radius: 5px;
+        position: relative;
+        padding-top: 50px;
+    }
+    /* Hijos de Publicidad */
+    .publicidad__titulo{
+        text-align: center;
+        font-size: 50px;
+        text-decoration: underline ;
+        font-family: sans-serif;
+        color: #22181C;
+    }
+    .publicidad__img{
+        position: absolute;
+        bottom: 0px;
+        width: 350px;
+        transform:rotateY(5deg);
+    }
+    /* Encuesta */
+    #encuesta{
+        grid-area: encuesta;
+        margin-top: 50px;
+        height: 250px;
+        padding: 5px;
+        border-radius: 5px;
+        border-top: solid 10px red;
+        border-bottom: solid 10px red;
+    }
+    /* Hijos de Encuesta */
+    .encuesta__titulo{
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }  
+    .encuesta__contenedor-si{
+        margin-top: 30px;
+    }
+    .encuesta__boton{
+        width: 100%;
+        font-size: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    /* Newsletters */
+    .newsletters{
+        grid-area: newsletters;
+        margin: 10px 10%;
+        padding: 20px;
+        background-color: #bd0335;
+        
+    }
+    /* hijos de newsletters */
+    .contenedor-newletters{
+        
+    }
+    .newsletters__titulo{
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        color: white;
+    }
+    .newsletters__label{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+    .newsletters__contenedor-label-input{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .newletters__input{
+        background-color: white;
+        width: 300px;
+        height: 20px;
+    }
+    .newsletters__boton{
+        width: 100px;
+        height: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:#bd0335 ;
+    }
+    /* Pie */
+    #pie{
+        grid-area: footer;
+        background-color: #12172B;
+        padding: 10px 5% 50px 5%;
+    }
+    .pie__contenedor{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .contenedor__contacto-seguinos{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        flex: 1.5;
+    }
+    .pie__laescuderia{
+        flex: 2;
+    }
+    .pie__laescuderia-titulo{
+        font-family: 'Bree Serif', serif;
+        font-size: 30px;
+        color: white;
+    }
+    .pie__laescuderia-subtitulo{
+        color: white;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 15px;
+    }
+    .pie__titulo{
+        color: white;
+        font-size: 25px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .pie__email{
+        color: white;
+    }
+    .contenedor-logo{
+        margin-top: 10p;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    .pie__logo:hover{
+        border-radius: 10px;
+        background-color: orange;
+    }
+    /* EQUIPO */
+    .carousel-item{
+        position: relative;
+    }
+   
+    #carouselExampleCaptions{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+/* ESTADISTICAS*/
+.estadisticas__contenedor{
+    margin: 20px 10%;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    border-radius: 10px;
+    border: solid 2px black;
 
-    <!-- Header-Menu -->
-    <!-- Proximo-gp -->
-    <!-- Publicidad -->
-    <!-- Noticias -->
-    <!-- Encuesta -->
-    <!-- Newsletters -->
-    <!-- Pie -->
+}
+.estadisticas__temporada{
+    flex: 1;
+}
+.estadisticas__tabla{
+    flex: 2;
+    margin-left: 10px;
+}
+.estadisticas__particular{
+    margin-top: 20px;
+}
+.estadisticas__items{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#años{
+    margin-bottom: 20px;
+   font-size: 25px;
+    font-family: 'Oswald', sans-serif; 
+}
+.años__particular{
+    font-family: 'Oswald', sans-serif; 
+}
+.estadisticas__particular{
+    padding: 5px 0;
+    font-family: 'Lexend Deca', sans-serif;
 }

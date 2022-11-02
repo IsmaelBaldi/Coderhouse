@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? family=Noticia+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2? family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2? family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>    
+<title>La Escuderia</title>
+</head>
+<body>
+    <header id="cabeza">
+        <div class="contenedor-titulo">
+            <h1 class="cabeza__titulo">LA ESCUDERIA</h1>
+            <p class="cabeza__subtitulo">Para los verdaderos fans de la formula 1</p>
+        </div>
+        <div class="contenedor-menu">
+            <label for="menu">
+                <img src="../svg/menu.svg" alt="menu-hamburguesa" class="nav__img-menu">
+            </label>
+            <input type="checkbox" name="menu" id="menu" class="input">
+            <div class="navmenu">
+                <div><a href="index.html" class="navmenu__item">INICIO</a></div>
+                <div><a href="equipos.html" class="navmenu__item">EQUIPOS</a></div>
+                <div><a href="paginas/estadisticas.html" class="navmenu__item">ESTADISTICAS</a></div>
+                <div><a href="paginas/galeria.html" class="navmenu__item">GALERIA</a></div>
+                <div><a href="paginas/nosotros.html" class="navmenu__item">NOSOTROS</a></div>
+                <div class="buscador navmenu__item"><label for="buscar"><img class="buscar" src="../svg/search.svg" alt="buscar"></label>
+                <input type="text" placeholder="buscar" id="buscar"></div>
+            </div>
+        </div>
+    </header>
+    <main id="formulario">
+    <div class="formulario__contenedor">
+    <form action="enviar.php">
+       <fieldset>
+       <legend>Queremos saber tu opinion</legend>
+        <div class="nombre">
+         <label for="nombre">Nombre</label>
+         <input type="Nombre" id="nombre" placeholder="Nombre">
+       </div>
+       <div class="apellido">  
+       <label for="apellido">Apellido</label>
+         <input type="text" id="apellido" placeholder="Apellido">
+       </div> 
+       <div class="email">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="email">
+       </div>
+       <div class="comentar">
+        <label for="comentar">Comentario</label class="comentario">
+        <div>
+           <textarea name="comentario" id="comentar" cols="50" rows="10" placeholder="Esribe tu comentario"></textarea>
+        </div>
+       </div>
+       <div class="botones">
+           <input type="submit" value="Enviar">
+           <input type="reset" value="Borrar Todo">
+       </div>
+       </fieldset>
+    </form>
+    </div>
+    <div class="nosotros">
+    <div class="quienes-somos">
+        <h3>¿Quienes Somos?</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex eos voluptas qui debitis ratione alias nesciunt nobis accusantium deserunt architecto, aut harum fugit dolorum iure doloribus repellendus illo dicta quo.</p>
+    </div>
+    <div><h3>La Escuderia</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis facere quod ea quas, officiis quidem assumenda consectetur tempore adipisci dolorem! Tenetur deleniti dignissimos consectetur sed voluptas necessitatibus iste, vel praesentium.</p>
+    </div>
+    </div>
+   </main>
+   <footer id="pie">
+    <div class="pie__contenedor">
+        <div class="pie__laescuderia">
+            <h4 class="pie__laescuderia-titulo">LA ESCUDERIA</h4>
+            <small class="pie__laescuderia-subtitulo">El sitio para los fans de la F1. Noticias, resultados, estadisiticas, fotografias, videos y toda la informacion de la Formula 1.No te pierdas ninguna novedad de la F1 </small>
+        </div>
+        <div class="contenedor__contacto-seguinos">
+            <div class="pie__contacto">
+                <h4 class="pie__titulo">CONTACTO</h4>
+                <img class="pie__logo" src="../svg/email.svg" alt="email">
+                <span class="pie__email">laescuderia@gmail.com</span>
+            </div>
+            <div class="pie__seguinos">
+                <h4 class="pie__titulo">SEGUINOS EN</h4>
+                <div class="contenedor-logo">
+                <img class="pie__logo" src="../svg/facebook.svg" alt="facebook">
+                <img class="pie__logo" src="../svg/twitter.svg" alt="twitter">
+                <img class="pie__logo" src="../svg/instagram.svg" alt="instagram">
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
